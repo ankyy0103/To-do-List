@@ -91,6 +91,7 @@ app.post("/delete",function(req,res) {
      Item.findByIdAndRemove(checkItemId,function(err){
        if(!err){
          console.log("Succesfully deleted checked Item");
+         res.redirect("/");
        }
      })
    }else{
